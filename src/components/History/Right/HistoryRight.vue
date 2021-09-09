@@ -72,6 +72,10 @@ export default {
 
 .history_right_subtitle_div {
   width: 100%;
+  /* height: 100%; */
+  /* border: solid 1px red; */
+  display: flex;
+  align-items: center;
 }
 
 .history_right_subtitle {
@@ -88,6 +92,8 @@ export default {
 }
 
 .history_right_img_inside_div {
+  /* border: solid 1px red; */
+  margin-top: 30px;
   display: flex;
   justify-content: space-around;
 }
