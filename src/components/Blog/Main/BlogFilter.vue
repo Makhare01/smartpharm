@@ -1,7 +1,7 @@
 <template>
-  <div class="filterside_div">
-    <a href="/" class="filterside_logo"
-      ><img src="../../assets/img/smartpharm_logo.png" alt="Smartharm logo"
+  <div class="blog_filter_container">
+    <a href="/" class="blog_filter_logo"
+      ><img src="../../../assets/img/smartpharm_logo.png" alt="Smartharm logo"
     /></a>
 
     <div class="last_added_div">
@@ -49,11 +49,10 @@
 </template>
 
 <script>
-import data from "../../../data/newsData.json";
+import data from "../../../../data/newsData.json";
 
 export default {
-  name: "FilterSide",
-  components: {},
+  name: "BlogFilter",
   data() {
     return {
       last: [],
@@ -62,7 +61,7 @@ export default {
     };
   },
   mounted() {
-    let last_added = data.news.filter(
+    let last_added = data.blogs.filter(
       (i) => i.newsIndex === 0 || i.newsIndex === 1 || i.newsIndex === 2
     );
     last_added.reverse();
@@ -100,21 +99,21 @@ export default {
 </script>
 
 <style scoped>
-.filterside_div {
+.blog_filter_container {
   width: 100%;
   max-width: 250px;
   height: 100vh;
-  /* max-height: 930px; */
   position: sticky;
   top: 0px;
   left: 0px;
   padding: 0px 30px;
   /* border: solid 1px red; */
   background-color: #a3a3a3;
-  float: left;
+  /* float: left; */
+  background-color: #aca5b2;
 }
 
-.filterside_logo img {
+.blog_filter_logo {
   display: block;
   margin: auto;
   margin-top: 30px;
@@ -181,7 +180,8 @@ export default {
   color: white;
 }
 
-/* Foltering */
+/* Filtering */
+
 .filtering_div {
   width: 100%;
   height: 300px;
@@ -236,36 +236,5 @@ export default {
   text-align: left !important;
   font-size: 14px;
   font-family: TBC Contractica CAPS Book;
-}
-
-@media only screen and (max-width: 750px) {
-  .filterside_div {
-    max-width: 100%;
-    padding: 0;
-    position: relative;
-    /* border: solid 1px blue; */
-    /* display: none; */
-  }
-
-  .filterside_logo img {
-    margin-top: 15px;
-  }
-
-  .last_added_div {
-    width: 90%;
-    margin: auto;
-    margin-top: 50px;
-  }
-
-  .filtering_div {
-    width: 90%;
-    margin: auto;
-    margin-top: 50px;
-  }
-
-  .filterside_div {
-    height: 100%;
-    margin-bottom: 20px;
-  }
 }
 </style>

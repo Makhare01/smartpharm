@@ -12,8 +12,9 @@
 
 <script>
 import allData from "../../../../data/newsData.json";
+
 export default {
-  name: "NewsDetail",
+  name: "BlogsDetail",
   data() {
     return {
       id: this.$route.params.id,
@@ -22,13 +23,13 @@ export default {
   },
   watch: {
     "$route.params.id": function() {
-      let news = allData.news.filter((i) => i.id == this.$route.params.id);
-      this.data = news[0];
+      let blogs = allData.blogs.filter((i) => i.id == this.$route.params.id);
+      this.data = blogs[0];
     },
   },
   mounted() {
-    let news = allData.news.filter((i) => i.id == this.$route.params.id);
-    this.data = news[0];
+    let blogs = allData.blogs.filter((i) => i.id == this.$route.params.id);
+    this.data = blogs[0];
   },
   computed: {
     bgImage() {
