@@ -4,6 +4,7 @@ import NewsDetails from "../components/News/Details/NewsDetails.vue";
 import HistoryMain from "../components/History/HistoryMain.vue";
 import BlogMain from "../components/Blog/Main/BlogMain.vue";
 import BlogsDetails from "../components/Blog/Details/BlogsDetails.vue";
+import VacancyMain from "../components/Vacancy/VacancyMain.vue";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/blog/:id",
     name: "BlogsDetails",
     component: BlogsDetails,
+  },
+  {
+    path: "/vacancy",
+    name: "VacancyMain",
+    component: VacancyMain,
   },
 ];
 
